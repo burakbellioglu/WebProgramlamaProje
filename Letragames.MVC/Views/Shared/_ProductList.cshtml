@@ -1,0 +1,40 @@
+﻿@using Letragames.MVC.Entity;
+@model IEnumerable<Product>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var urun in Model)
+    {
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Upload/@urun.Image" class="card-img-top" alt="@urun.Name">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/Home/Details/@urun.Id"> @urun.Name </a>
+                    </h5>
+                    <p class="card-text">
+
+
+                        @if (urun.Description.Length > 75)
+                        {
+                            var newDescription = urun.Description.Substring(0, 72) + "...";
+
+                            urun.Description = newDescription;
+                        }
+
+
+                        @urun.Description
+
+
+
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small>@urun.Price TL</small>
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>

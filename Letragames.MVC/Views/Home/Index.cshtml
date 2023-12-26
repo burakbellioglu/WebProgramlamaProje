@@ -1,0 +1,35 @@
+﻿@using Letragames.MVC.Entity;
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <br />
+    <h1 class="display-5 fw-bold" style="color:beige; margin-left:30%; font-size:100px;"> LETRAGAMES</h1>
+
+    <p style="margin-left: 38%; font-size: 23px; ">Oyunlar oyuncuların elinde daha güzel...</p>
+    <br />
+</div>
+
+<div class="container">
+
+    
+
+    <p style="margin-left: 30%; font-size: 40px; ">Öne çıkan favori ürünler</p>
+
+</div>
+
+
+
+<div class="container">
+
+
+    @Html.Partial("_ProductList", Model)
+
+</div>
+
+
+
+

@@ -1,0 +1,27 @@
+﻿
+
+<ul class="navbar-nav" style="margin-right:-110px">
+
+    @if (Request.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Home">@User.Identity.Name</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Account/Logout">Logout</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Account/Login">Giriş Yap</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Account/Register">Kayıt Ol</a>
+        </li>
+    }
+
+
+
+</ul>
+

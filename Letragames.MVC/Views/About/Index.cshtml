@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container">
+    <div class="row" style="align-content:center">
+
+        <div class="col-xs-12 col-md-6 text-center-sm">
+            <div class="region">
+
+                <div class="page-title block" style="text-align:center; padding:20px; background-color: #f6f6f6; color:black; font-size: 1.8em; font-family: 'Dosis' , sans-serif;">
+                    <h1>HAKKIMIZDA</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div id="content-region" class="region">
+
+    <div id="about-content-block" class="block">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <br />
+                    <p>Letragames, 2017 yılında Burak Bellioğlu tarafından kurulan bir oyun geliştirme ve yayıncılık şirketidir. Şirket, oyun dünyasına yenilikçi ve eğlenceli çözümler sunmayı hedeflemekte ve teknoloji odaklı ürünler geliştirmektedir.</p>
+                    <p>Letragames, oyun geliştirme, pazarlama ve yayıncılık alanlarında faaliyet göstererek eğlence odaklı ürünler sunmaktadır. Yaratıcı ve profesyonel ekibiyle, oyunseverlere hitap eden çeşitli projelere imza atmıştır. Teknolojiyi en son olanaklarıyla birleştirerek benzersiz oyun deneyimleri sunmayı amaçlamaktadır.</p>
+
+                </div>
+
+                <div class="col-xs-12 col-md-6 margin-top-sm-30">
+                    <img src="~/Upload/about.png" style="width: 80%; height: auto;">
+                    <br />
+                    <br />
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <p>40 kişilik uzman kadrosuyla, şirket sürekli Ar-Ge çalışmalarıyla kendi altyapısını güçlendirmekte ve yenilikçi projelere imza atmaktadır.</p>
+                <p>Oyun dünyasında öncü bir rol üstlenen Letragames, yeni oyun uzantılarına odaklanarak Afrika, Asya ve Avrupa'da yüksek talep görmüş ve kullanıcılar tarafından en çok tercih edilen firmalardan biri haline gelmiştir.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="container">
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <td style="width: 25%; height: 100px; text-align: center; border: 1px solid #ddd;">
+                <img src="~/Upload/partner1.png" class="img-responsive" style="max-width: 100%; max-height: 100%;">
+            </td>
+            <td style="width: 25%; height: 100px; text-align: center; border: 1px solid #ddd;">
+                <img src="~/Upload/partner2.png" class="img-responsive" style="max-width: 100%; max-height: 100%;">
+            </td>
+            <td style="width: 25%; height: 100px; text-align: center; border: 1px solid #ddd;">
+                <img src="~/Upload/partner3.png" class="img-responsive" style="max-width: 100%; max-height: 100%;">
+            </td>
+            <td style="width: 25%; height: 100px; text-align: center; border: 1px solid #ddd;">
+                <img src="~/Upload/partner4.png" class="img-responsive" style="max-width: 100%; max-height: 100%;">
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+<div class="container">
+    <div class="row" style="align-content:center">
+
+        <div class="col-xs-12 col-md-6 text-center-sm">
+            <div class="region">
+
+                <div class="page-title block" style="text-align:center; padding:20px; background-color: #f6f6f6; color:black; font-size: 1.8em; font-family: 'Dosis' , sans-serif;">
+                    <h1>KAYNAKÇA</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br />
+    <br />
+
+</div>
+
+<div class="container">
+
+
+     
+            @foreach (var item in Model)
+            {
+                <div>
+
+                    <p class="card-text">
+                        @item.Id)
+                        @item.Name
+                    </p>
+
+                    <div class="card-footer">
+                        <small>@item.Link </small>
+                    </div>
+
+                    <hr />
+                    <br />
+                </div>
+            }
+
+
+
+
+</div>
+
+

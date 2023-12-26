@@ -1,0 +1,50 @@
+﻿@model Letragames.MVC.Entity.Kaynak
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <br />
+    <h2>Kaynakçayı Sil</h2>
+
+    <h3>Aşağıda bilgileri verilen kaynakçayı silmek istediğinize emin misiniz ?</h3>
+    <br />
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Link)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Link)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Kaynakçayı SİL " class="btn btn-danger" />
+            </div>
+
+            <div>
+                <br />
+                @Html.ActionLink("Kaynakça listesine geri dön", "Index", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>
+    </div>
